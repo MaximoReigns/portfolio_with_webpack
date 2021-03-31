@@ -1,4 +1,7 @@
 import getData from '../utils/getData.js';
+import github from '../assets/images/github.png';
+import twitter from '../assets/images/twitter.png';
+import instagram from '../assets/images/instagram.png';
 
 const Template = async () => {
   const data = await getData();
@@ -7,7 +10,7 @@ const Template = async () => {
       <div class="card">
         <div class="card_details">
           <div class="card_photo center circle">
-            <img src="${data.picture.large}" alt="${data.name.first}">
+            <img src="${data.picture.medium}" alt="${data.name.first}">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="enable-background:new -580 439 577.9 194;"
               xml:space="preserve">
               <circle cx="50" cy="50" r="40" />
@@ -19,18 +22,19 @@ const Template = async () => {
         <div class="card_userdata">
           <ul>
             <li>${data.email}</li>
+            <
             <li>${data.location.country}</li>
           </ul>
         </div>
         <div class="card_social">
           <a href="https://twitter.com/gndx">
-            <img src="../src/assets/images/twitter.png" />
+            <img src="${twitter}" />
           </a>
           <a href="https://github.com/gndx">
-            <img src="../src/assets/images/github.png" />
+            <img src="${github}" />
           </a>
           <a href="https://instagram.com/gndx">
-            <img src="../src/assets/images/instagram.png" />
+            <img src="${instagram}" />
           </a>
         </div>
       </div>
